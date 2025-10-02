@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Support My Forex Trading</title>
+<style>
+  body {
+    font-family: 'Arial', sans-serif;
+    background: #0d1117;
+    color: #e6edf3;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  header {
+    padding: 50px 20px 20px;
+  }
+  header h1 { color: #58a6ff; font-size: 2.4rem; }
+  header p { font-size: 1.1rem; color: #c9d1d9; }
+
+  /* Support Banner */
+  #support-banner {
+    max-width:900px;
+    margin:30px auto;
+    padding:20px 25px;
+    border-radius:12px;
+    background: #161b22;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+    color:#e6edf3;
+    text-align:center;
+  }
+  #support-banner h2 { margin:0 0 10px; color:#58a6ff; font-size:1.8rem; }
+  #support-banner p { margin:0; font-size:1rem; color:#c9d1d9; line-height:1.5; }
+
+  /* Wallet Cards */
+  .wallet-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  .wallet-box {
+    background: #161b22;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+  }
+  .wallet-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.6);
+  }
+  .wallet-box h2 { margin-bottom: 8px; font-size: 1.2rem; }
+  .wallet-box p { font-size: 0.85rem; word-break: break-all; margin-bottom: 12px; color: #c9d1d9; }
+  .copy-btn {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    color: white;
+    background: #238636;
+    transition: 0.3s;
+  }
+  .copy-btn:hover { background: #2ea043; }
+  .qrcode { margin: 10px auto; width: 140px; height: 140px; }
+  .copy-msg {
+    position: absolute; top: 8px; right: 8px;
+    background: #2ea043; color: white;
+    padding: 4px 8px; border-radius: 6px;
+    font-size: 0.75rem; opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s;
+  }
+
+  /* Contact Email */
+  #contact {
+    margin: 30px 0; font-size:1rem;
+  }
+  #contact a {
+    color:#58a6ff; text-decoration:none; transition:0.3s;
+  }
+  #contact a:hover { color:#2ea043; }
+
+  /* Colors */
+  .usdt h2 { color: #26a17b; }
+  .trx h2 { color: #ff9800; }
+  .btc h2 { color: #f2a900; }
+  .eth h2 { color: #7f5af0; }
+
+  @media (max-width:900px){ .wallet-container{grid-template-columns:repeat(2,1fr);} .qrcode{width:120px;height:120px;} }
+  @media (max-width:500px){ .wallet-container{grid-template-columns:1fr;} .qrcode{width:100px;height:100px;} }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>🙏 Support My Trading Journey</h1>
+  <p>Donate with your preferred cryptocurrency to help me continue trading!</p>
+</header>
+
+<section id="support-banner">
+  <h2>🙏 Support My Forex Trading Journey</h2>
+  <p>
+    I am continuing my Forex trading journey to secure a stable future for my family and create a sustainable income.<br>
+    Your support will help me develop strategies, test ideas, and improve my trading skills.<br>
+    Even a small contribution makes a big difference and motivates me to keep going.<br>
+  </p>
+</section>
+
+<div class="wallet-container">
+  <div class="wallet-box usdt">
+    <h2>USDT (TRC20)</h2>
+    <p id="usdt-address">TCZs9kBQm1SrpKxdEebRW2t5kJeESmzQZb</p>
+    <div class="qrcode" id="qrcode-usdt"></div>
+    <button class="copy-btn" onclick="copyAddress('usdt-address', this)">Copy</button>
+    <div class="copy-msg"></div>
+  </div>
+  <div class="wallet-box trx">
+    <h2>TRON (TRX)</h2>
+    <p id="trx-address">TCZs9kBQm1SrpKxdEebRW2t5kJeESmzQZb</p>
+    <div class="qrcode" id="qrcode-trx"></div>
+    <button class="copy-btn" onclick="copyAddress('trx-address', this)">Copy</button>
+    <div class="copy-msg"></div>
+  </div>
+  <div class="wallet-box btc">
+    <h2>Bitcoin (BTC)</h2>
+    <p id="btc-address">bc1qujs6mr4qrmr73ch06d2wrntpuuldn4p269ls6h</p>
+    <div class="qrcode" id="qrcode-btc"></div>
+    <button class="copy-btn" onclick="copyAddress('btc-address', this)">Copy</button>
+    <div class="copy-msg"></div>
+  </div>
+  <div class="wallet-box eth">
+    <h2>Ethereum (ETH)</h2>
+    <p id="eth-address">0x4Ec544aa885B473f11cc31E2DC21ab7A60eEa296</p>
+    <div class="qrcode" id="qrcode-eth"></div>
+    <button class="copy-btn" onclick="copyAddress('eth-address', this)">Copy</button>
+    <div class="copy-msg"></div>
+  </div>
+</div>
+
+<!-- Contact Email -->
+<div id="contact">
+  <p>📧 Contact me: <a href="mailto:youremail@example.com">omid.masoodd21@gmail.com</a></p>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+<script>
+  // Generate QR Codes
+  function generateQRCode(id, address, color) {
+    new QRCode(document.getElementById(id), {
+      text: address,
+      width: 140,
+      height: 140,
+      colorDark: color,
+      colorLight: "#0d1117",
+      correctLevel: QRCode.CorrectLevel.H
+    });
+  }
+  generateQRCode("qrcode-usdt", "TJ8xQYw1exampleWalletAddress123", "#26a17b");
+  generateQRCode("qrcode-trx", "TXYZExampleTRXAddress012", "#ff9800");
+  generateQRCode("qrcode-btc", "1A1zP1exampleBTCAddress456", "#f2a900");
+  generateQRCode("qrcode-eth", "0xAbC123ExampleETHAddress789", "#7f5af0");
+
+  // Copy Address with Thank You message
+  function copyAddress(id, btn) {
+    const text = document.getElementById(id).innerText;
+    navigator.clipboard.writeText(text).then(() => {
+      const msg = btn.parentElement.querySelector('.copy-msg');
+      msg.textContent = "Thank you for your support!";
+      msg.style.opacity = 1;
+      setTimeout(() => { msg.style.opacity = 0; }, 1500);
+    });
+  }
+</script>
+
+</body>
+</html>
